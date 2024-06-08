@@ -9,3 +9,4 @@ pip install wordcloud
 pip install python-dateutil
 pip install google-auth
 pip install google-auth-oauthlib
+pip install -r requirements.txt
