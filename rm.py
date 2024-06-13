@@ -93,12 +93,7 @@ def render_charts(df):
                   color='Aspect', color_discrete_map=custom_colors)
     fig4.update_layout(width=1080, height=720)
     st.plotly_chart(fig4)
-    fig, ax = plt.subplots(figsize=(12, 8))
-    wordcloud = WordCloud(width=1080, height=720, max_words=100, background_color='white').generate(' '.join(df['review_text']))
-    ax.imshow(wordcloud, interpolation='bilinear')
-    ax.axis('off')
-    ax.set_title('Frequency of Mentions')
-    st.pyplot(fig)
+  
     fig1 = px.scatter(df, x='rating', y='compound_sentiment', color='rating',
                       labels={'rating': 'Rating', 'compound_sentiment': 'Rating Sentiment'},
                       title='Sentiment Analysis Based On Ratings',
