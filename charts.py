@@ -3,7 +3,6 @@ import plotly.express as px
 import plotly.graph_objs as go
 import seaborn as sns
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
 import pandas as pd
 
 def render_charts(df):
