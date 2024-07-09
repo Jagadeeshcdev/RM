@@ -37,14 +37,6 @@ def render_charts(df):
                   color='Aspect', color_discrete_map=custom_colors)
     st.plotly_chart(fig4)
 
-    # Chart 6: Word Cloud - Frequency of Mentions
-    fig, ax = plt.subplots(figsize=(12, 8))
-    wordcloud = WordCloud(width=1080, height=720, max_words=100, background_color='white').generate(' '.join(df['review_text']))
-    ax.imshow(wordcloud, interpolation='bilinear')
-    ax.axis('off')
-    ax.set_title('Frequency of Mentions')
-    st.pyplot(fig)
-
     # Chart 7: Effective Positive and Negative Feedback
     positive_feedback = df[df['feedback_category'] == 'Positive'].sample(n=50, replace=True)
     negative_feedback = df[df['feedback_category'] == 'Negative'].sample(n=50, replace=True)
